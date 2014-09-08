@@ -41,8 +41,8 @@
       this.surpriseLayer.visible = false;
 
       this.game.physics.startSystem(Phaser.Physics.ARCADE);
-      this.player = this.game.add.sprite(800, 2300, 'player');
-      //this.player = this.game.add.sprite(275, 3050, 'player');
+      //this.player = this.game.add.sprite(800, 2300, 'player');
+      this.player = this.game.add.sprite(275, 3050, 'player');
       this.player.animations.add('run');
       this.player.inputEnabled = true;
       this.player.anchor.setTo(0.5, 0.5);
@@ -145,10 +145,6 @@
     },
 
     gameIsOver: false,
-
-    render: function() {
-      this.game.debug.spriteCoords(this.player, 32, 500);
-    },
 
     createCoins: function() {
       this.coin = this.game.add.sprite(720, 1800, 'goldCoin');
